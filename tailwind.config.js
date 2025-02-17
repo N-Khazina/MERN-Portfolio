@@ -9,7 +9,7 @@ export default {
         tertiary: "#ff6f00",
       },
       screens: {
-        sm: { max: "640px" }, 
+        sm: { max: "900px" }, 
         lg: { max: "2024px" },
       },
     },
