@@ -1,16 +1,16 @@
 import React from "react";
 import SectionTitle from "../../components/SectionTitle";
-import { projects } from "../../resources/projects";
+import { courses } from "../../resources/courses";
 
-function Projects() {
+function Courses() {
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
   return (
     <div>
-      <SectionTitle title="Projects" />
+      <SectionTitle title="courses" />
 
       <div className="flex gap-10 py-10 sm:flex-col">
         <div className="flex flex-col w-1/3 gap-10 border-l-2 border-secondary sm:flex-row sm:overflow-x-scroll sm:w-full">
-          {projects.map((project, index) => (
+          {courses.map((course, index) => (
             <div
               onClick={() => {
                 setSelectedItemIndex(index);
@@ -24,24 +24,24 @@ function Projects() {
                     : `text-white `
                 } `}
               >
-                {project.title}
+                {course.title}
               </h1>
             </div>
           ))}
         </div>
         <div className="flex items-center justify-center gap-10 sm:flex-col">
           <img
-            src={projects[selectedItemIndex].image}
+            src={courses[selectedItemIndex].image}
             alt=""
             className="h-62 w-72"
           /> 
         </div>
         <div className="flex flex-col gap-5">
           <h1 className="text-2xl text-secondary">
-            {projects[selectedItemIndex].title}
+            {courses[selectedItemIndex].title}
           </h1>
           <h1 className="text-2xl text-white">
-            {projects[selectedItemIndex].description}
+            {courses[selectedItemIndex].description}
           </h1>
         </div>
       </div>
@@ -49,4 +49,5 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Courses;
+3
