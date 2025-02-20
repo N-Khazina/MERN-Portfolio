@@ -18,7 +18,7 @@ function Courses() {
               className="cursor-pointer"
             >
               <h1
-                className={`text-xl px-5 ${
+                className={`text-xl sm:text-lg px-5 ${
                   selectedItemIndex === index
                     ? `text-tertiary border-tertiary border-l-4 -ml-[3px] bg-[#313131] py-3`
                     : `text-white `
@@ -29,13 +29,6 @@ function Courses() {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-10 sm:flex-col">
-          <img
-            src={courses[selectedItemIndex].image}
-            alt=""
-            className="h-62 w-72"
-          /> 
-        </div>
         <div className="flex flex-col gap-5">
           <h1 className="text-2xl text-secondary">
             {courses[selectedItemIndex].title}
@@ -43,6 +36,13 @@ function Courses() {
           <h1 className="text-2xl text-white">
             {courses[selectedItemIndex].description}
           </h1>
+        </div>
+        <div className="flex items-center justify-center gap-10 sm:flex-col">
+          <img
+            src={courses[selectedItemIndex].image}
+            alt=""
+            className="h-62 w-80"
+          /> 
         </div>
       </div>
     </div>

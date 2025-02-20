@@ -36,7 +36,7 @@ function Projects() {
             className="h-62 w-72"
           /> 
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 sm:text-lg">
           <h1 className="text-2xl text-secondary">
             {projects[selectedItemIndex].title}
           </h1>
